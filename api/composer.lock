@@ -4,8 +4,54 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "cf5e210f404934396388a3170f87602e",
+    "content-hash": "23511ee580f930e5089894e058c66108",
     "packages": [
+        {
+            "name": "artisansdk/ratelimiter",
+            "version": "1.0.3",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/artisansdk/ratelimiter.git",
+                "reference": "7f2b382e842f2dc339500fbf5ce09468151506d9"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/artisansdk/ratelimiter/zipball/7f2b382e842f2dc339500fbf5ce09468151506d9",
+                "reference": "7f2b382e842f2dc339500fbf5ce09468151506d9",
+                "shasum": ""
+            },
+            "require": {
+                "illuminate/contracts": "~5.0|~6.0|~7.0|~8.0|~9.0|~10.0",
+                "nesbot/carbon": "~1.0|~2.0",
+                "php": ">=7.0|>=8.0",
+                "symfony/http-kernel": "~2.6|~3.3|~4.0|~5.0|~6.0"
+            },
+            "require-dev": {
+                "artisansdk/bench": "~1.0.0-rc2"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "ArtisanSdk\\RateLimiter\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Daniel LaBarge",
+                    "email": "daniel@artisanmade.io"
+                }
+            ],
+            "description": "A leaky bucket rate limiter and corresponding middleware with route-level granularity compatible with Laravel.",
+            "support": {
+                "issues": "https://github.com/artisansdk/ratelimiter/issues",
+                "source": "https://github.com/artisansdk/ratelimiter/tree/1.0.3"
+            },
+            "time": "2023-02-08T21:24:55+00:00"
+        },
         {
             "name": "brick/math",
             "version": "0.11.0",
@@ -2552,6 +2598,76 @@
             "time": "2023-02-25T19:38:58+00:00"
         },
         {
+            "name": "predis/predis",
+            "version": "v2.1.1",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/predis/predis.git",
+                "reference": "c5b60884e89630f9518a7919f0566db438f0fc9a"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/predis/predis/zipball/c5b60884e89630f9518a7919f0566db438f0fc9a",
+                "reference": "c5b60884e89630f9518a7919f0566db438f0fc9a",
+                "shasum": ""
+            },
+            "require": {
+                "php": "^7.2 || ^8.0"
+            },
+            "require-dev": {
+                "phpunit/phpunit": "^8.0 || ~9.4.4"
+            },
+            "suggest": {
+                "ext-curl": "Allows access to Webdis when paired with phpiredis"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-main": "2.0-dev"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Predis\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Till Krüss",
+                    "homepage": "https://till.im",
+                    "role": "Maintainer"
+                },
+                {
+                    "name": "Daniele Alessandri",
+                    "email": "suppakilla@gmail.com",
+                    "homepage": "http://clorophilla.net",
+                    "role": "Creator"
+                }
+            ],
+            "description": "A flexible and feature-complete Redis client for PHP.",
+            "homepage": "http://github.com/predis/predis",
+            "keywords": [
+                "nosql",
+                "predis",
+                "redis"
+            ],
+            "support": {
+                "issues": "https://github.com/predis/predis/issues",
+                "source": "https://github.com/predis/predis/tree/v2.1.1"
+            },
+            "funding": [
+                {
+                    "url": "https://github.com/sponsors/tillkruss",
+                    "type": "github"
+                }
+            ],
+            "time": "2023-01-17T20:57:35+00:00"
+        },
+        {
             "name": "psr/cache",
             "version": "3.0.0",
             "source": {
@@ -3265,6 +3381,70 @@
                 }
             ],
             "time": "2023-02-07T16:14:23+00:00"
+        },
+        {
+            "name": "spatie/laravel-rate-limited-job-middleware",
+            "version": "2.2.7",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/spatie/laravel-rate-limited-job-middleware.git",
+                "reference": "fe56605ad98ba2abee46528ee8fe287f9416e926"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/spatie/laravel-rate-limited-job-middleware/zipball/fe56605ad98ba2abee46528ee8fe287f9416e926",
+                "reference": "fe56605ad98ba2abee46528ee8fe287f9416e926",
+                "shasum": ""
+            },
+            "require": {
+                "artisansdk/ratelimiter": "^1.0",
+                "illuminate/cache": "^8.0|^9.0|^10.0",
+                "illuminate/redis": "^8.0|^9.0|^10.0",
+                "php": "^8.0"
+            },
+            "require-dev": {
+                "mockery/mockery": "^1.4.1",
+                "orchestra/testbench": "^6.23|^7.0|^8.0",
+                "pestphp/pest": "^1.21",
+                "phpunit/phpunit": "^9.5",
+                "spatie/pest-plugin-test-time": "^1.0",
+                "symfony/var-dumper": "^5.4|^6.0"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "Spatie\\RateLimitedMiddleware\\": "src"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Freek Van der Herten",
+                    "email": "freek@spatie.be",
+                    "homepage": "https://spatie.be",
+                    "role": "Developer"
+                }
+            ],
+            "description": "A middleware that can rate limit jobs",
+            "homepage": "https://github.com/spatie/laravel-rate-limited-job-middleware",
+            "keywords": [
+                "laravel-rate-limited-job-middleware",
+                "spatie"
+            ],
+            "support": {
+                "issues": "https://github.com/spatie/laravel-rate-limited-job-middleware/issues",
+                "source": "https://github.com/spatie/laravel-rate-limited-job-middleware/tree/2.2.7"
+            },
+            "funding": [
+                {
+                    "url": "https://github.com/spatie",
+                    "type": "github"
+                }
+            ],
+            "time": "2023-02-06T15:36:45+00:00"
         },
         {
             "name": "symfony/console",
