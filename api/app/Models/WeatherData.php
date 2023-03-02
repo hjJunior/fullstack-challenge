@@ -9,11 +9,18 @@ class WeatherData extends Model
 {
     use HasFactory;
 
+    public const OUTDATED_AFTER_MINUTES = 15;
+
     protected $casts = [
         'data' => 'json'
     ];
 
-    protected $fillable = ['data'];
+    protected $guarded = [];
+
+    public function scopeOutdated($query)
+    {
+        return $query->where("updated_at", "<=", now()->subMinutes(self::OUTDATED_AFTER_MINUTES));
+    }
 
     public function user()
     {

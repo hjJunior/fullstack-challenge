@@ -19,7 +19,7 @@ class SyncAllUsersWeatherDataJob implements ShouldQueue
 
     public function handle(): void
     {
-        foreach (User::cursor() as $user) {
+        foreach (User::whereOutdatedWeatherData()->cursor() as $user) {
             SyncUserLastWeatherDataJob::dispatch($user);
         }
     }
