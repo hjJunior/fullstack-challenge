@@ -16,6 +16,7 @@ class FetchUserWeather
     $params = [
       'lat' => $user->latitude,
       'lon' => $user->longitude,
+      'units' => 'imperial'
     ];
 
     return $this->weatherApi->get($params);

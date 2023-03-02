@@ -41,6 +41,12 @@ class FetchUserWeatherTest extends TestCase
         'Failed to assert that fetched the correctly user longitude'
       );
 
+      $this->assertEquals(
+        'imperial',
+        $request['units'],
+        'Failed to assert that fetched using imperial units'
+      );
+
       return true;
     });
   }
