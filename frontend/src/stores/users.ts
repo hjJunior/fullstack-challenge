@@ -18,7 +18,7 @@ export const useUsers = defineStore("users", () => {
   const { search } = storeToRefs(useGlobalSearch());
   const { users, isLoading, isError } = useUsersFetch();
 
-  const selectedUserId = ref();
+  const selectedUserId = ref<string | null>(null);
 
   const filteredUsers = computed(() =>
     users.value?.filter(filterUser(search.value))

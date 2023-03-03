@@ -1,5 +1,5 @@
 <template>
-  <li class="bg-white">
+  <li class="bg-white" data-testid="user-row-skeleton">
     <div class="relative flex items-center space-x-3 px-6 py-5">
       <div class="flex-shrink-0">
         <div class="h-10 w-10 rounded-full bg-gray-300 animate-pulse" />

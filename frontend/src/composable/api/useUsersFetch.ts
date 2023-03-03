@@ -4,7 +4,9 @@ import axios from "axios";
 
 axios.defaults.baseURL = import.meta.env.VITE_API_URL;
 
-const getUsers = () => axios.get("/users").then(({ data }) => data.users);
+const getUsers = () => {
+  return axios.get("/users").then(({ data }) => data.users);
+};
 
 const FIVE_MINUTES_IN_MS = 5 * 60 * 1000;
 
@@ -16,7 +18,7 @@ const useUsersFetch = () => {
   } = useQuery<User[]>({
     queryKey: ["users"],
     queryFn: getUsers,
-    staleTime: FIVE_MINUTES_IN_MS,
+    refetchInterval: FIVE_MINUTES_IN_MS,
   });
 
   return {

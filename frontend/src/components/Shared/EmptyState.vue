@@ -1,10 +1,8 @@
 <script setup lang="ts">
-import type { FunctionalComponent } from "vue";
-
 defineProps<{
   title: string;
   message: string;
-  icon: string | FunctionalComponent;
+  icon: any;
 }>();
 </script>
 

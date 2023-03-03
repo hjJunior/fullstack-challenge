@@ -22,7 +22,12 @@ const selected = computed(() => props.user.id === selectedUserId.value);
         :class="[selected ? 'w-2' : 'w-0']"
       />
       <div class="flex-shrink-0">
-        <img class="h-10 w-10 rounded-full" :src="avatar" alt="" />
+        <img
+          data-testid="avatar"
+          class="h-10 w-10 rounded-full"
+          :src="avatar"
+          alt=""
+        />
       </div>
       <div class="min-w-0 flex-1">
         <a href="#" class="focus:outline-none">

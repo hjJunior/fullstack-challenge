@@ -21,10 +21,13 @@ const unitSymbol = computed(() => (unit.value === "celsius" ? "°C" : "°F"));
 </script>
 
 <template>
-  <div class="flex flex-col items-center justify-center p-2">
+  <div
+    class="flex flex-col items-center justify-center p-2"
+    data-testid="weather-report"
+  >
     <img :src="icon" class="h-24" />
     <div class="flex">
-      <div class="text-2xl mr-2">{{ temp }}</div>
+      <div class="text-2xl mr-2" data-testid="temp">{{ temp }}</div>
       <div class="flex items-center justify-center space-x-2">
         <button
           :class="{ 'font-bold': unit === 'celsius' }"

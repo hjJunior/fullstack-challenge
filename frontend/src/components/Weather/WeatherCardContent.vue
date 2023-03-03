@@ -17,7 +17,7 @@ const { selectedUser } = storeToRefs(useUsers());
   />
   <EmptyState
     v-else-if="!selectedUser.last_weather"
-    title="No Weather data"
+    title="No weather data"
     message="We are getting this data"
     :icon="MoonIcon"
   />
