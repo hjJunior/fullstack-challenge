@@ -15,7 +15,7 @@ const selected = computed(() => props.user.id === selectedUserId.value);
   <li class="bg-white">
     <div
       class="relative flex items-center space-x-3 px-6 py-5 hover:bg-gray-50"
-      @click="selectedUserId = user.id"
+      @click.prevent="selectedUserId = user.id"
     >
       <div
         class="absolute top-0 left-0 bottom-0 bg-gray-700 transition-all"
