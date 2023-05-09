@@ -2,6 +2,7 @@
 
 namespace Database\Factories;
 
+use App\Models\WeatherData;
 use Illuminate\Database\Eloquent\Factories\Factory;
 use Illuminate\Support\Str;
 
@@ -26,5 +27,10 @@ class UserFactory extends Factory
             'longitude' => fake()->longitude(),
             'latitude' => fake()->latitude(),
         ];
+    }
+
+    public function withLastWeatherData()
+    {
+        return $this->has(WeatherData::factory(), 'lastWeather');
     }
 }

@@ -1,0 +1,67 @@
+{
+  "message": "all systems are a go",
+  "users": [
+    {
+      "id": 1,
+      "name": "Dr. Newell Bradtke DVM",
+      "email": "ivy.kunze@example.net",
+      "email_verified_at": "2023-03-02T16:09:18.000000Z",
+      "latitude": "30.39139700",
+      "longitude": "-90.64071900",
+      "created_at": "2023-03-02T16:09:18.000000Z",
+      "updated_at": "2023-03-02T16:09:18.000000Z",
+      "last_weather": {
+        "id": 1,
+        "user_id": 1,
+        "data": {
+          "dt": 1677787458,
+          "id": 4329820,
+          "cod": 200,
+          "sys": {
+            "id": 2018814,
+            "type": 2,
+            "sunset": 1677801705,
+            "country": "US",
+            "sunrise": 1677760085
+          },
+          "base": "stations",
+          "main": {
+            "temp": 83.84,
+            "humidity": 75,
+            "pressure": 1005,
+            "temp_max": 87.08,
+            "temp_min": 81.16,
+            "sea_level": 1005,
+            "feels_like": 91.78,
+            "grnd_level": 1005
+          },
+          "name": "Killian",
+          "wind": {
+            "deg": 167,
+            "gust": 13.94,
+            "speed": 9.91
+          },
+          "coord": {
+            "lat": 30.3914,
+            "lon": -90.6407
+          },
+          "clouds": {
+            "all": 99
+          },
+          "weather": [
+            {
+              "id": 804,
+              "icon": "04d",
+              "main": "Clouds",
+              "description": "overcast clouds"
+            }
+          ],
+          "timezone": -21600,
+          "visibility": 10000
+        },
+        "created_at": "2023-03-02T16:12:07.000000Z",
+        "updated_at": "2023-03-02T20:04:16.000000Z"
+      }
+    }
+  ]
+}
